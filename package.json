@@ -1,0 +1,79 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "dependencies": {
+    "@fontsource/quattrocento-sans": "^4.1.0",
+    "@fontsource/work-sans": "^4.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "hamburger-react": "^2.4.0",
+    "react-helmet-async": "^1.0.7",
+    "react-switch": "^6.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@emotion/babel-plugin": "^11.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@socata/admin-dashboard",
+  "author": "Kaleb Heitzman",
+  "module": "dist/socata-admin-dashboard.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/socata-admin-dashboard.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/socata-admin-dashboard.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.1.2",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@size-limit/preset-small-lib": "^4.9.1",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "eslint": "^7.18.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.8",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "size-limit": "^4.9.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
+  }
+}
